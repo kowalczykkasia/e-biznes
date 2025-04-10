@@ -1,0 +1,4 @@
+version: "3.8"
+services:
+  zadanie1:
+    image: kowalczykkasiaa/zad1_app:latest
