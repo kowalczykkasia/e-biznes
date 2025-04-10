@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+.Dockerfile.swp
+**/.Dockerfile.swp
+
+# IntelliJ IDEA
+.idea/
+
+# Kotlin Gradle files
+.zgradle/
+build/
+.gradle/
+
+# Gradle Wrapper files
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
+# Gradle Cache
+.gradle/8.10/
+
+# Kotlin App build files
+kotlin_app/build/
+kotlin_app/.gradle/
+
+# Kotlin project files
+kotlin_app/.idea/
+kotlin_app/kotlin_app.iml
+kotlin_app/gradle-wrapper.properties
+
+# Kotlin app source files
+kotlin_app/src/.DS_Store
+kotlin_app/src/main/.DS_Store
+
+# Generated files for Kotlin project
+kotlin_app/build.gradle.kts
+kotlin_app/gradlew
+kotlin_app/gradlew.bat
