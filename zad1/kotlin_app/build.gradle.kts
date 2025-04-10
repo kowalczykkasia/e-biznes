@@ -1,6 +1,5 @@
 plugins {
     kotlin("jvm") version "1.8.10"
-    application
 }
 
 repositories {
@@ -12,6 +11,9 @@ dependencies {
     implementation("org.xerial:sqlite-jdbc:3.41.2.2")
 }
 
-application {
-    mainClass.set("MainKt")
+tasks {
+    register<JavaExec>("run") {
+        mainClass.set("MainKt")
+        classpath = sourceSets["main"].runtimeClasspath
+    }
 }
