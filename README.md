@@ -15,7 +15,7 @@ Zadanie 1
 Zadanie 2
 
 
-✅ 3.0 wymaganie 1 [Link do commita 1][https://github.com/kowalczykkasia/e-biznes/commit/99663e52d650f368994ff63e2e1a0d86dcf083c6]
+✅ 3.0 wymaganie 1 [Link do commita 1](https://github.com/kowalczykkasia/e-biznes/commit/99663e52d650f368994ff63e2e1a0d86dcf083c6)
 
 ❌ 3.5 wymaganie 2 [Link do commita2]()
 
