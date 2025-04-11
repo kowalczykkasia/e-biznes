@@ -15,14 +15,14 @@ Zadanie 1
 Zadanie 2
 
 
-✅ 3.0 wymaganie 1 [Link do commita 1](https://github.com/kowalczykkasia/e-biznes/commit/99663e52d650f368994ff63e2e1a0d86dcf083c6)
+✅ 3.0 wymaganie 1 [Link do brancha 1](https://github.com/kowalczykkasia/e-biznes/tree/zad2-3.0)
 
-❌ 3.5 wymaganie 2 [Link do commita2]()
+✅ 3.5 wymaganie 2 [Link do brancha 2](https://github.com/kowalczykkasia/e-biznes/tree/zad2-3.5)
 
-❌ 4.0 wymaganie 3 [Link do commita 4]()
+✅ 4.0 wymaganie 3 [Link do brancha 3](https://github.com/kowalczykkasia/e-biznes/tree/zad2-4.0)
 
-❌ 4.5 wymaganie 4 [Link do commita 4]()
+✅ 4.5 wymaganie 4 [Link do brancha 4](https://github.com/kowalczykkasia/e-biznes/tree/zad2-4.5)
 
-❌ 5.0 wymaganie 5 [Link do commita 5]()
+✅ 5.0 wymaganie 5 [Link do brancha 5](https://github.com/kowalczykkasia/e-biznes/tree/zad2-5.0)
 
 
