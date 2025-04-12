@@ -1,5 +1,6 @@
 Zadanie 1
 
+https://hub.docker.com/r/kowalczykkasiaa/zad1_app
 
 ✅ 3.0 wymaganie 1 [Link do commita 1](https://github.com/kowalczykkasia/e-biznes/commit/f8b1237f6fc7ee2879f422338a5350db4236510d)
 
