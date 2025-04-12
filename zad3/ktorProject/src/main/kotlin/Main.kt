@@ -12,8 +12,8 @@ import kotlinx.coroutines.*
 import kotlinx.serialization.json.*
 import java.util.*
 
-const val botToken = "MTM2MDUyMzQ1MjgzODMxNDExNA.GXzWix.k7BMpmBex-qs_d5kvPs184wydO4Hzf7ZW1bkf0"
-const val channelId = "1360527507891290192"
+const val botToken = "botToken"
+const val channelId = "channelId"
 
 suspend fun sendMessage(content: String) {
     val client = HttpClient(CIO) {
