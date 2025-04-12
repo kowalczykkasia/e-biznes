@@ -1,3 +1,6 @@
+import dev.kord.core.Kord
+import dev.kord.core.event.message.MessageCreateEvent
+import dev.kord.core.on
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*
@@ -27,6 +30,26 @@ suspend fun sendMessage(content: String) {
     client.close()
 }
 
-fun main() = runBlocking {
-    sendMessage("Wiadomość testowa od Ktor! 💬")
+suspend fun runBot() {
+    val bot = Kord(botToken)
+
+    bot.on<MessageCreateEvent> {
+        if (message.author?.isBot == false) {
+            if (message.getChannelOrNull()?.data?.type?.value == 1) {
+                val dmChannel = message.author?.getDmChannel()
+                dmChannel?.createMessage("Thanks for your private message!")
+            } else {
+                sendMessage("Thanks for message on this channel!")
+            }
+        }
+    }
+
+    bot.login {
+        presence { playing("Some cool music") }
+    }
 }
+
+fun main() = runBlocking {
+    runBot()
+}
+
