@@ -1,4 +1,5 @@
 import dev.kord.core.Kord
+import dev.kord.core.entity.Message
 import dev.kord.core.event.message.MessageCreateEvent
 import dev.kord.core.on
 import io.ktor.client.*
@@ -26,7 +27,7 @@ suspend fun sendMessage(content: String) {
         setBody(Json.encodeToJsonElement(mapOf("content" to content)))
     }
 
-    println("Wysłano wiadomość. Status: ${response.status}")
+    println("Message sent. Status: ${response.status}")
     client.close()
 }
 
@@ -35,17 +36,34 @@ suspend fun runBot() {
 
     bot.on<MessageCreateEvent> {
         if (message.author?.isBot == false) {
-            if (message.getChannelOrNull()?.data?.type?.value == 1) {
-                val dmChannel = message.author?.getDmChannel()
-                dmChannel?.createMessage("Thanks for your private message!")
-            } else {
-                sendMessage("Thanks for message on this channel!")
+            when {
+                message.content.contains(CATEGORIES_KEY) -> {
+                    getCategories(message)
+                }
+                else -> {
+                    respond(message, "Thank you for messaging me!")
+                }
             }
+
         }
     }
 
     bot.login {
         presence { playing("Some cool music") }
+    }
+}
+
+private suspend fun getCategories(message: Message) {
+    val response = CATEGORIES.joinToString(separator = "\n") { "- $it" }
+    respond(message, "Available categories:\n$response")
+}
+
+private suspend fun respond(message: Message, response: String) {
+    if (message.getChannelOrNull()?.data?.type?.value == 1) {
+        val dmChannel = message.author?.getDmChannel()
+        dmChannel?.createMessage(response)
+    } else {
+        sendMessage(response)
     }
 }
 
