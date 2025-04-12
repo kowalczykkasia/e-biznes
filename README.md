@@ -41,3 +41,16 @@ Zadanie 3
 ❌ 5.0 wymaganie 5 [Link do brancha 5](https://github.com/kowalczykkasia/e-biznes/tree/zad3-5.0)
 
 
+Zadanie 5
+
+
+✅ 3.0 wymaganie 1 [Link do brancha 1](https://github.com/kowalczykkasia/e-biznes/tree/zad5-3.0)
+
+❌ 3.5 wymaganie 2 [Link do brancha 2])
+
+❌ 4.0 wymaganie 3 [Link do brancha 3])
+
+❌ 4.5 wymaganie 4 [Link do brancha 4])
+
+❌ 5.0 wymaganie 5 [Link do brancha 5]()
+
