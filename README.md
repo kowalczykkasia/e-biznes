@@ -38,7 +38,7 @@ Zadanie 3
 
 ✅ 4.5 wymaganie 4 [Link do brancha 4](https://github.com/kowalczykkasia/e-biznes/tree/zad3-4.5)
 
-❌ 5.0 wymaganie 5 [Link do brancha 5](https://github.com/kowalczykkasia/e-biznes/tree/zad3-5.0)
+❌ 5.0 wymaganie 5 [Link do brancha 5]
 
 Zadanie 4
 
