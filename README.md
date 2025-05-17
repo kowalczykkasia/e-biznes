@@ -79,3 +79,24 @@ Zadanie 6
 
 ❌ 5.0 wymaganie 5 [Link do brancha 5]
 
+
+
+Zadanie 7
+
+
+✅ 3.0 wymaganie 1 
+
+[Link do servera](https://github.com/kowalczykkasia/zad7-server)
+
+[Link do clienta](https://github.com/kowalczykkasia/zad7-client)
+
+❌ 3.5 wymaganie 2 [Link do brancha 2]
+
+❌ 4.0 wymaganie 3 [Link do brancha 3]
+
+❌ 4.5 wymaganie 4 [Link do brancha 4]
+
+❌ 5.0 wymaganie 5 [Link do brancha 5]
+
+
+
