@@ -1,33 +1,35 @@
 package main
 
 import (
-	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
-	"zad4/handlers"
-	"zad4/models"
-	"log"
+    "log"
+    "zad4/handlers"
+    "zad4/models"
 
-	"gorm.io/gorm"
-	"gorm.io/driver/sqlite"
+    "github.com/labstack/echo/v4"
+    "github.com/labstack/echo/v4/middleware"
+    "gorm.io/driver/sqlite"
+    "gorm.io/gorm"
 )
 
 func main() {
-	db, err := gorm.Open(sqlite.Open("./products.db"), &gorm.Config{})
-	if err != nil {
-		log.Fatal("Failed to connect to the database")
-	}
+    db, err := gorm.Open(sqlite.Open("./products.db"), &gorm.Config{})
+    if err != nil {
+        log.Fatal("Failed to connect to the database:", err)
+    }
+    db.AutoMigrate(&models.Product{})
 
-	db.AutoMigrate(&models.Product{})
+    e := echo.New()
+    e.Use(middleware.Logger())
+    e.Use(middleware.Recover())
 
-	e := echo.New()
+    productHandler := &handlers.ProductHandler{DB: db}
 
-	e.Use(middleware.Logger())
-	e.Use(middleware.Recover())
+    e.GET("/products", productHandler.GetAll)
+    e.POST("/products", productHandler.Create)
 
-	productHandler := &handlers.ProductHandler{DB: db}
+    e.PUT("/products/:id", productHandler.Update)
 
-	e.GET("/products", productHandler.GetAll)
-	e.POST("/products", productHandler.Create)
+    e.DELETE("/products/:id", productHandler.Delete)
 
-	e.Logger.Fatal(e.Start(":8080"))
+    e.Logger.Fatal(e.Start(":8080"))
 }
